@@ -34,7 +34,5 @@ cask "netclient" do
     sudo: true,
   }
 
-  uninstall script: {
-  }
 end
 
