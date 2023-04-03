@@ -16,6 +16,10 @@ cask "netclient" do
   depends_on formula: "wireguard-tools"
   binary "netclient",  target: "netclient"
 
+  preflight do 
+    run touch "#{staged_path}/blank.sh",
+  end
+
   postflight do
     set_permissions "/Applications/netclient", '0755'
   end
