@@ -3,9 +3,9 @@ cask "netclient" do
   version "0.20.1"
 
   if Hardware::CPU.intel?
-    sha256 "278b9075bdf9076f472e2e965700572c2d988baeda10664f37ffdde4c4158fdc"
+    sha256 "f73c5882d13ea277ecd66e027904a5208861a8e21b96aa5311fafb70497a9e83"
   else
-    sha256 "f17d73d29128fc0bd55196c1786015083212bb5e81d9f0de6af5ab49c0de11fe"
+    sha256 "d802c4d04d498dca5249e0866e5b45c93f48152a190a99e49ecbc554ec183e31"
   end
 
   url "https://fileserver.netmaker.org/v#{version}/darwin/netclient-#{arch}.tgz",
