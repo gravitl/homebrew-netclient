@@ -1,11 +1,11 @@
 cask "netclient" do
   arch = Hardware::CPU.intel? ? "amd64" : "arm64"
-  version "0.20.1"
+  version "0.20.4"
 
   if Hardware::CPU.intel?
-    sha256 "f73c5882d13ea277ecd66e027904a5208861a8e21b96aa5311fafb70497a9e83"
+    sha256 "85f64de901e94474df710eae96a66e8d9e6da22184d8a19e582e8f21feaa4b1d"
   else
-    sha256 "d802c4d04d498dca5249e0866e5b45c93f48152a190a99e49ecbc554ec183e31"
+    sha256 "2327be5da7b486d58478b4eb7447c7ecfa67a6639551084a5c16bcf435ee9065"
   end
 
   url "https://fileserver.netmaker.org/v#{version}/darwin/netclient-#{arch}.tgz",
