@@ -8,7 +8,7 @@ cask "netclient" do
     sha256 "a7cfd7903f86ebcc1042077d2314858d737afe46a47a08895f8203ef03e0d1f7"
   end
 
-  url "https://fileserver.netmaker.org/v#{version}/darwin/netclient-#{arch}.tgz",
+  url "https://fileserver.netmaker.org/releases/download/v#{version}/netclient-#{arch}.tgz",
     verified: "https://fileserver.netmaker.org"
   name "netclient"
   desc "A platform for modern, blazing fast virtual networks"
