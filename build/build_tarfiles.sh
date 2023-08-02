@@ -32,5 +32,6 @@ sed -i "6s/.*/\    sha256 \"$SHA1\"/"  ../Casks/netclient.rb
 sed -i "8s/.*/\    sha256 \"$SHA2\"/" ../Casks/netclient.rb
 
 #copy files to netmaker.org
+mkdir -p /var/www/files/releases/download/v$VERSION
 cp netclient-amd64.tgz /var/www/files/releases/download/v$VERSION/
 cp netclient-arm64.tgz /var/www/files/releases/download/v$VERSION/
