@@ -14,13 +14,13 @@ sed -i s/"VERSION/$VERSION"/  install.sh
 wget -O netclient "https://github.com/gravitl/netclient/releases/download/v$VERSION/netclient-darwin-amd64"
 chmod +x netclient
 cp ../service/com.gravitl.netclient.plist .
-tar -zcf netclient-amd64.tgz netclient com.gravitl.netclient.plist install.sh uninstall.sh
+tar -zcf netclient-amd64.tgz netclient com.gravitl.netclient.plist install.sh uninstall.sh blank.sh
 
 #get arm64 binary
 wget -O netclient "https://github.com/gravitl/netclient/releases/download/v$VERSION/netclient-darwin-arm64"
 chmod +x netclient
 cp ../service/com.gravitl.netclient.plist.m1 com.gravitl.netclient.plist
-tar -zcf netclient-arm64.tgz netclient com.gravitl.netclient.plist install.sh uninstall.sh
+tar -zcf netclient-arm64.tgz netclient com.gravitl.netclient.plist install.sh uninstall.sh blank.sh
 
 #calc sha
 SHA1=$(shasum -a 256 netclient-amd64.tgz | cut -d " " -f 1)
