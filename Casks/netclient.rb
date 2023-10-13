@@ -27,6 +27,7 @@ cask "netclient" do
 
   uninstall script: {
     executable: "#{staged_path}/blank.sh",
+    sudo: true,
   }
 
   zap script: {
