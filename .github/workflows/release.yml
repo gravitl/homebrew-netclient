@@ -49,9 +49,10 @@ jobs:
           cp ../service/com.gravitl.netclient.plist .
           cp ../Casks/scripts/install.sh .
           cp ../Casks/scripts/uninstall.sh .
+          cp ../Casks/scripts/blank.sh .
           sed -i 's/VERSION/"${{ env.PACKAGE_VERSION }}"/'' install.sh
           tar -zcf netclient.tgz netclient com.gravitl.netclient.plist
-          rm netclient com.gravitl.netclient.plist install.sh uninstall.sh
+          rm netclient com.gravitl.netclient.plist install.sh uninstall.sh blank.sh
       - name: update
         run: |
           SHA=$(shasum -a 256 build/netclient.tgz | cut -d " " -f 1)

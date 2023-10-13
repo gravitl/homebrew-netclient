@@ -1,14 +1,14 @@
 cask "netclient" do
   arch = Hardware::CPU.intel? ? "amd64" : "arm64"
-  version "0.17.0"
+  version "0.21.0"
 
   if Hardware::CPU.intel?
-    sha256 "20af8ace3317630d3bec788614631e58e543ace95afb59dfc413aca9f1314d7b"
+    sha256 "b2e0fce02e6291e1f941b209f55db95c9c56eaefcd04663b3b784ad8c448b44d"
   else
-    sha256 "c5ab83a37b2f630a975c4764a2090b986779f73f82234ef3ca2bd64ca4c47491"
+    sha256 "d958dd9561985be84835a70cc8734d283fd4115a89b0e3db6169e5fc3972babe"
   end
 
-  url "https://fileserver.netmaker.org/v#{version}/darwin/netclient-#{arch}.tgz",
+  url "https://fileserver.netmaker.org/releases/download/v#{version}/netclient-#{arch}.tgz",
     verified: "https://fileserver.netmaker.org"
   name "netclient"
   desc "A platform for modern, blazing fast virtual networks"
@@ -25,14 +25,15 @@ cask "netclient" do
     sudo: true,
   }
 
+  uninstall script: {
+    executable: "#{staged_path}/blank.sh",
+    sudo: true,
+  }
+
   zap script: {
     executable: "#{staged_path}/uninstall.sh",
     sudo: true,
   }
 
-  uninstall script: {
-    executable: "#{staged_path}/uninstall.sh",
-    sudo: true,
-  }
 end
 
